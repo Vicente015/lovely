@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <style>
+    @font-face {
+      font-family: "Spectral";
+      src: url("fonts/Spectral-Regular.ttf");
+    }
+    /* https://stackoverflow.com/questions/952607/how-to-set-margins-0-on-print-preview */
+    @page {
+      margin: 0;
+    }
+    * {
+      margin: 0;
+    }
+    html {
+      max-width: 70ch;
+      padding: 1em;
+      margin: 0 auto;
+      line-height: 1.5;
+      font-size: 20px;
+      print-color-adjust: exact;
+    }
+    body {
+      background-color: #365314;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      margin-bottom: 0.3em;
+      color: #effcd4;
+      font-family: 'Spectral', serif;
+      text-align: justify;
+    }
+    p,ul,ol {
+      margin-bottom: 1.5em;
+      color: #ECFCCB;
+      font-family: 'Spectral', serif;
+      text-align: justify;
+    }
+    img {
+      cursor: pointer !important;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      filter: saturate(200%) contrast(60%);
+    }
+    a {
+      color: #ddfc97;
+      text-decoration: none;
+    }
+    footer p {
+      color: #dbfc97;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+    footer a {
+      color: #ebfcca;
+    }
+    article[contenteditable="true"] {
+      padding: 0 5px;
+      outline: 1px solid #dbfc97;
+      border-radius: 5px;
+    }
+    @media print {
+      body {
+        padding: 0 4em;
+      }
+      img {
+        margin-top: 20px;
+        line-height: 0;
+      }
+    }
+  </style>
+  <script src="scripts/medium-zoom.min.js"></script>
+</head>
+<body>
+  <article {% if dev == true %} contenteditable="true"{% endif %}>
+    {{ content | safe }}
+  </article>
+  <footer>
+    <p>~ Page created using <a href="https://github.com/vicente015/lovely" target="_blank">lovely</a><p>
+  </footer>
+</body>
+<script defer>
+  mediumZoom('img', {
+    margin: 20,
+    background: '#365314'
+  })
+</script>
+</html>
