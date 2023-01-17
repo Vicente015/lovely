@@ -4,5 +4,24 @@
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
+  },
+  "lint": {
+    "rules": {
+      "include": ["eqeqeq"],
+      "tags": ["recommended"]
+    },
+    "files": {
+      "exclude": ["scripts/", "_site"]
+    }
+  },
+  "fmt": {
+    "options": {
+      "indentWidth": 2,
+      "singleQuote": true,
+      "useTabs": false
+    },
+    "files": {
+      "exclude": [".md"]
+    }
   }
 }
