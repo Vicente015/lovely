@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "Spectral";
-  src: url("fonts/Spectral-Regular.ttf");
-}
 
 /* https://stackoverflow.com/questions/952607/how-to-set-margins-0-on-print-preview */
 @page {
@@ -9,6 +5,28 @@
 }
 * {
   margin: 0;
+}
+:root {
+  --chestnut-50: red;
+  --chestnut-100: #f9f1dc;
+  --chestnut-200: #f1dbb4;
+  --chestnut-300: #ddb480;
+  --chestnut-400: #c58851;
+  --chestnut-500: #a96630;
+  --chestnut-600: #8b4c1f;
+  --chestnut-700: #693919;
+  --chestnut-800: #472613;
+  --chestnut-900: #2c170d;
+  --olive-50: #f8f9f7;
+  --olive-100: #edf1eb;
+  --olive-200: #d6e1d2;
+  --olive-300: #abc1a6;
+  --olive-400: #719b77;
+  --olive-500: #547b4f;
+  --olive-600: #446138;
+  --olive-700: #36492c;
+  --olive-800: #253121;
+  --olive-900: #171e17;
 }
 html {
   max-width: 70ch;
@@ -19,17 +37,17 @@ html {
   print-color-adjust: exact;
 }
 body {
-  background-color: #365314;
+  background-color: var(--olive-700);
 }
 h1,h2,h3,h4,h5,h6 {
   margin-bottom: 0.3em;
-  color: #effcd4;
+  color: var(--olive-200);
   font-family: 'Spectral', serif;
   text-align: justify;
 }
 p,ul,ol {
   margin-bottom: 1.5em;
-  color: #ECFCCB;
+  color: var(--olive-300);
   font-family: 'Spectral', serif;
   text-align: justify;
 }

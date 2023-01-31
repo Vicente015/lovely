@@ -23,4 +23,6 @@ You can also create tasklists:
 
 You can also create footnotes like this [^1].
 
+Or use [[second|wikilinks]]
+
 [^1]: This is a footnote.
