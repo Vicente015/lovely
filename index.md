@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
 title: Lovely
+theme: chestnut
 ---
 
 Lovely 💘 is the perfect software for creating beautiful and heartfelt love letters on the internet. With its cozy and homemade philosophy, Lovely allows you to easily generate stunning pages with images, scripts, and CSS all inline, so you can easily send the .html file to your loved one. With Lovely, you can also download or print the page, making it perfect for those special moments when you want to hold onto the memory forever.

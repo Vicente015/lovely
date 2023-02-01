@@ -1,6 +1,7 @@
 import lume from 'lume/mod.ts';
 import remark from 'lume/plugins/remark.ts';
 import inline from 'lume/plugins/inline.ts';
+import sass from "lume/plugins/sass.ts";
 import date from 'lume/plugins/date.ts';
 import remarkWikiLink from 'npm:remark-wiki-link-plus';
 import remarkA11YEmoji from 'npm:@fec/remark-a11y-emoji';
@@ -24,8 +25,9 @@ const site = lume();
 site.ignore('README.md');
 
 site.process(['.html'], transformToInline);
-site.process(['.html'], (page: Page) => console.debug(page.data));
+//site.process(['.html'], (page: Page) => console.debug(page.data));
 
+site.use(sass());
 site.use(date());
 site.use(remark({
   remarkPlugins: [remarkWikiLink, remarkA11YEmoji],

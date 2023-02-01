@@ -1,0 +1,306 @@
+
+/* https://stackoverflow.com/questions/952607/how-to-set-margins-0-on-print-preview */
+@page {
+  margin: 0;
+}
+* {
+  margin: 0;
+}
+:root {
+  --chestnut-50: #f8f9f7;
+  --chestnut-100: #f9f1dc;
+  --chestnut-200: #f1dbb4;
+  --chestnut-300: #ddb480;
+  --chestnut-400: #c58851;
+  --chestnut-500: #a96630;
+  --chestnut-600: #8b4c1f;
+  --chestnut-700: #693919;
+  --chestnut-800: #472613;
+  --chestnut-900: #2c170d;
+  --olive-50: #f8f9f7;
+  --olive-100: #edf1eb;
+  --olive-200: #d6e1d2;
+  --olive-300: #abc1a6;
+  --olive-400: #719b77;
+  --olive-500: #547b4f;
+  --olive-600: #446138;
+  --olive-700: #36492c;
+  --olive-800: #253121;
+  --olive-900: #171e17;
+  --cyan-50:  #f6f9fa;
+  --cyan-100: #e1f1fb;
+  --cyan-200: #bedef7;
+  --cyan-300: #8fbeea;
+  --cyan-400: #5e98d9;
+  --cyan-500: #4874c9;
+  --cyan-600: #3b59b3;
+  --cyan-700: #2f428f;
+  --cyan-800: #212d65;
+  --cyan-900: #131b40;
+  --blue-50: #f8fafb;
+  --blue-100: #e7f1fc;
+  --blue-200: #cdd9fa;
+  --blue-300: #a7b5f1;
+  --blue-400: #858ce6;
+  --blue-500: #6c67dd;
+  --blue-600: #584bcd;
+  --blue-700: #4238ab;
+  --blue-800: #2e267c;
+  --blue-900: #19174c;
+  --purple-50:  #fbfbfb;
+  --purple-100: #f4f1f9;
+  --purple-200: #e8d4f4;
+  --purple-300: #d1ace4;
+  --purple-400: #c17fd1;
+  --purple-500: #aa5abf;
+  --purple-600: #8e3fa4;
+  --purple-700: #6a2f7e;
+  --purple-800: #492055;
+  --purple-900: #291430;
+  --cerise-50:  #fcfcfb;
+  --cerise-100: #faf1f2;
+  --cerise-200: #f5d2e4;
+  --cerise-300: #e7a6c6;
+  --cerise-400: #e176a2;
+  --cerise-500: #d05283;
+  --cerise-600: #b63762;
+  --cerise-700: #8e2947;
+  --cerise-800: #631d2e;
+  --cerise-900: #3a1219;
+  --coral-50:  #fdfcfa;
+  --coral-100: #fbf1ea;
+  --coral-200: #f6d3d2;
+  --coral-300: #eaa8a9;
+  --coral-400: #e3787b;
+  --coral-500: #d25457;
+  --coral-600: #b83a3c;
+  --coral-700: #902b2c;
+  --coral-800: #651e1e;
+  --coral-900: #3d1211;
+  --cocoa-50:  #fcfbf9;
+  --cocoa-100: #faf1e3;
+  --cocoa-200: #f5d6c3;
+  --cocoa-300: #e7ad94;
+  --cocoa-400: #db7e64;
+  --cocoa-500: #c75a41;
+  --cocoa-600: #aa402b;
+  --cocoa-700: #833021;
+  --cocoa-800: #5b2117;
+  --cocoa-900: #37140e;
+
+}
+html {
+  max-width: 70ch;
+  padding: 1em;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 20px;
+  print-color-adjust: exact;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: 0.3em;
+  font-family: 'Spectral', serif;
+  text-align: justify;
+}
+p,ul,ol {
+  margin-bottom: 1.5em;
+  font-family: 'Spectral', serif;
+  text-align: justify;
+}
+.olive {
+  background-color: var(--olive-700);
+  h1,h2,h3,h4,h5,h6,a {
+    color: var(--olive-200);
+  }
+  p,ul,ol {
+    color: var(--olive-300);
+  }
+  .medium-zoom-overlay {
+    background-color: var(--olive-800) !important;
+  }
+  footer {
+    a {
+      color: var(--olive-300);
+      text-decoration: underline wavy var(--olive-400);
+    }
+    a:hover {
+      color: var(--olive-200);
+    }
+  }
+}
+.chestnut {
+  background-color: var(--chestnut-700);
+  h1,h2,h3,h4,h5,h6,a {
+    color: var(--chestnut-200);
+  }
+  p,ul,ol {
+    color: var(--chestnut-300);
+  }
+  .medium-zoom-overlay {
+    background-color: var(--chestnut-800) !important;
+  }
+  footer {
+    a {
+      color: var(--chestnut-300);
+      text-decoration: underline wavy var(--chestnut-400);
+    }
+    a:hover {
+      color: var(--chestnut-200);
+    }
+  }
+}
+.cyan {
+  background-color: var(--cyan-700);
+  h1,h2,h3,h4,h5,h6,a {
+    color: var(--cyan-200);
+  }
+  p,ul,ol {
+    color: var(--cyan-300);
+  }
+  .medium-zoom-overlay {
+    background-color: var(--cyan-800) !important;
+  }
+  footer {
+    a {
+      color: var(--cyan-300);
+      text-decoration: underline wavy var(--cyan-400);
+    }
+    a:hover {
+      color: var(--cyan-200);
+    }
+  }
+}
+.blue {
+  background-color: var(--blue-700);
+  h1,h2,h3,h4,h5,h6,a {
+    color: var(--blue-200);
+  }
+  p,ul,ol {
+    color: var(--blue-300);
+  }
+  .medium-zoom-overlay {
+    background-color: var(--blue-800) !important;
+  }
+  footer {
+    a {
+      color: var(--blue-300);
+      text-decoration: underline wavy var(--blue-400);
+    }
+    a:hover {
+      color: var(--blue-200);
+    }
+  }
+}
+.purple {
+  background-color: var(--purple-700);
+  h1,h2,h3,h4,h5,h6,a {
+    color: var(--purple-200);
+  }
+  p,ul,ol {
+    color: var(--purple-300);
+  }
+  .medium-zoom-overlay {
+    background-color: var(--purple-800) !important;
+  }
+  footer {
+    a {
+      color: var(--purple-300);
+      text-decoration: underline wavy var(--purple-400);
+    }
+    a:hover {
+      color: var(--purple-200);
+    }
+  }
+}
+.cerise {
+  background-color: var(--cerise-700);
+  h1,h2,h3,h4,h5,h6,a {
+    color: var(--cerise-200);
+  }
+  p,ul,ol {
+    color: var(--cerise-300);
+  }
+  .medium-zoom-overlay {
+    background-color: var(--cerise-800) !important;
+  }
+  footer {
+    a {
+      color: var(--cerise-300);
+      text-decoration: underline wavy var(--cerise-400);
+    }
+    a:hover {
+      color: var(--cerise-200);
+    }
+  }
+}
+.coral {
+  background-color: var(--coral-700);
+  h1,h2,h3,h4,h5,h6,a {
+    color: var(--coral-200);
+  }
+  p,ul,ol {
+    color: var(--coral-300);
+  }
+  .medium-zoom-overlay {
+    background-color: var(--coral-800) !important;
+  }
+  footer {
+    a {
+      color: var(--coral-300);
+      text-decoration: underline wavy var(--coral-400);
+    }
+    a:hover {
+      color: var(--coral-200);
+    }
+  }
+}
+.cocoa {
+  background-color: var(--cocoa-700);
+  h1,h2,h3,h4,h5,h6,a {
+    color: var(--cocoa-200);
+  }
+  p,ul,ol {
+    color: var(--cocoa-300);
+  }
+  .medium-zoom-overlay {
+    background-color: var(--cocoa-800) !important;
+  }
+  footer {
+    a {
+      color: var(--cocoa-300);
+      text-decoration: underline wavy var(--cocoa-400);
+    }
+    a:hover {
+      color: var(--cocoa-200);
+    }
+  }
+}
+img {
+  cursor: pointer !important;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  filter: saturate(200%) contrast(60%);
+}
+a {
+  text-decoration: none;
+}
+footer p {
+  font-size: 0.9em;
+  font-style: italic;
+}
+article[contenteditable="true"] {
+  padding: 0 5px;
+  outline: 1px solid #dbfc97;
+  border-radius: 5px;
+}
+@media print {
+  body {
+    padding: 0 4em;
+  }
+  img {
+    margin-top: 20px;
+    line-height: 0;
+  }
+}
