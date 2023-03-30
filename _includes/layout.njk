@@ -7,8 +7,10 @@
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/css/style.css" inline>
   <script src="/scripts/medium-zoom.min.js" inline></script>
+  <script src="/scripts/theme-selection.js" inline defer></script>
 </head>
 <body>
+  {{ comp.OptionsMenu({}) | safe }}
   <article {% if dev == true %} contenteditable="true"{% endif %}>
     {{ content | safe }}
   </article>
