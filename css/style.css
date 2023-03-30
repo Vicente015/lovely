@@ -1,13 +1,5 @@
-
-/* https://stackoverflow.com/questions/952607/how-to-set-margins-0-on-print-preview */
-@page {
-  margin: 0;
-}
-* {
-  margin: 0;
-}
 :root {
-  --chestnut-50: red;
+  --chestnut-50: #f8f9f7;
   --chestnut-100: #f9f1dc;
   --chestnut-200: #f1dbb4;
   --chestnut-300: #ddb480;
@@ -27,21 +19,85 @@
   --olive-700: #36492c;
   --olive-800: #253121;
   --olive-900: #171e17;
+  --cyan-50:  #f6f9fa;
+  --cyan-100: #e1f1fb;
+  --cyan-200: #bedef7;
+  --cyan-300: #8fbeea;
+  --cyan-400: #5e98d9;
+  --cyan-500: #4874c9;
+  --cyan-600: #3b59b3;
+  --cyan-700: #2f428f;
+  --cyan-800: #212d65;
+  --cyan-900: #131b40;
+  --blue-50: #f8fafb;
+  --blue-100: #e7f1fc;
+  --blue-200: #cdd9fa;
+  --blue-300: #a7b5f1;
+  --blue-400: #858ce6;
+  --blue-500: #6c67dd;
+  --blue-600: #584bcd;
+  --blue-700: #4238ab;
+  --blue-800: #2e267c;
+  --blue-900: #19174c;
+  --purple-50:  #fbfbfb;
+  --purple-100: #f4f1f9;
+  --purple-200: #e8d4f4;
+  --purple-300: #d1ace4;
+  --purple-400: #c17fd1;
+  --purple-500: #aa5abf;
+  --purple-600: #8e3fa4;
+  --purple-700: #6a2f7e;
+  --purple-800: #492055;
+  --purple-900: #291430;
+  --cerise-50:  #fcfcfb;
+  --cerise-100: #faf1f2;
+  --cerise-200: #f5d2e4;
+  --cerise-300: #e7a6c6;
+  --cerise-400: #e176a2;
+  --cerise-500: #d05283;
+  --cerise-600: #b63762;
+  --cerise-700: #8e2947;
+  --cerise-800: #631d2e;
+  --cerise-900: #3a1219;
+  --coral-50:  #fdfcfa;
+  --coral-100: #fbf1ea;
+  --coral-200: #f6d3d2;
+  --coral-300: #eaa8a9;
+  --coral-400: #e3787b;
+  --coral-500: #d25457;
+  --coral-600: #b83a3c;
+  --coral-700: #902b2c;
+  --coral-800: #651e1e;
+  --coral-900: #3d1211;
+  --cocoa-50:  #fcfbf9;
+  --cocoa-100: #faf1e3;
+  --cocoa-200: #f5d6c3;
+  --cocoa-300: #e7ad94;
+  --cocoa-400: #db7e64;
+  --cocoa-500: #c75a41;
+  --cocoa-600: #aa402b;
+  --cocoa-700: #833021;
+  --cocoa-800: #5b2117;
+  --cocoa-900: #37140e;
 }
 
-:root,
-  :root.olive {
-    --heading-color: var(--olive-200);
-    --text-color: var(--olive-300);
-    --bg-color: var(--olive-700);
-  }
+:root, :root.olive {
+  --heading-color: var(--olive-200);
+  --text-color: var(--olive-300);
+  --bg-color: var(--olive-700);
+  --zoom-bg-color: var(--olive-800);
+}
 
-  :root.chestnut {
-    --heading-color: var(--chestnut-200);
-    --text-color: var(--chestnut-300);
-    --bg-color: var(--chestnut-700);
-  }
+:root.chestnut {
+  --heading-color: var(--chestnut-200);
+  --text-color: var(--chestnut-300);
+  --bg-color: var(--chestnut-700);
+  --zoom-bg-color: var(--chestnut-800);
+}
 
+* {
+  margin: 0;
+}
 
 html {
   max-width: 70ch;
@@ -51,21 +107,44 @@ html {
   font-size: 20px;
   print-color-adjust: exact;
 }
+
 body {
   background-color: var(--bg-color);
 }
+
 h1,h2,h3,h4,h5,h6 {
-  margin-bottom: 0.3em;
   color: var(--heading-color);
+  margin-bottom: 0.3em;
   font-family: 'Spectral', serif;
   text-align: justify;
 }
+
 p,ul,ol {
-  margin-bottom: 1.5em;
   color: var(--text-color);
+  margin-bottom: 1.5em;
   font-family: 'Spectral', serif;
   text-align: justify;
 }
+
+a {
+  color: var(--heading-color);
+  text-decoration: none;
+}
+
+footer p {
+  color: #dbfc97;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+footer a {
+  color: var(--olive-300);
+}
+
+.medium-zoom-overlay {
+  background-color: var(--zoom-bg-color);
+}
+
 img {
   cursor: pointer !important;
   border-radius: 10px;
@@ -73,18 +152,9 @@ img {
   height: 100%;
   filter: saturate(200%) contrast(60%);
 }
-a {
-  color: #ddfc97;
-  text-decoration: none;
-}
-footer p {
-  color: #dbfc97;
-  font-size: 0.9em;
-  font-style: italic;
-}
-footer a {
-  color: #ebfcca;
-}
+
+
+
 article[contenteditable="true"] {
   padding: 0 5px;
   outline: 1px solid #dbfc97;
@@ -105,4 +175,9 @@ article[contenteditable="true"] {
     margin-top: 20px;
     line-height: 0;
   }
+}
+
+/* https://stackoverflow.com/questions/952607/how-to-set-margins-0-on-print-preview */
+@page {
+  margin: 0;
 }

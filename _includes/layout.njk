@@ -7,7 +7,7 @@
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/css/style.css" inline>
   <script src="/scripts/medium-zoom.min.js" inline></script>
-  <script src="/scripts/theme-selection.js" inline defer></script>
+  <script src="/scripts/theme-selection.js" inline></script>
 </head>
 <body>
   {{ comp.OptionsMenu({}) | safe }}
@@ -20,8 +20,7 @@
 </body>
 <script defer>
   mediumZoom('img', {
-    margin: 20,
-    background: '#365314'
+    margin: 20
   })
 </script>
 </html>
