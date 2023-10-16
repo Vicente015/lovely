@@ -237,8 +237,8 @@ article[contenteditable="true"] {
 
 @media print {
   * {
-    font-size: 16pt;
-    line-height: 1.5;
+    font-size: 16pt !important;
+    line-height: 1.5 !important;
   }
 
   body {
@@ -246,6 +246,7 @@ article[contenteditable="true"] {
   }
 
   img {
+    margin: auto !important;
     line-height: 0;
   }
 
@@ -255,21 +256,23 @@ article[contenteditable="true"] {
   }
 
   img {
-    page-break-inside: avoid;
-    page-break-before: avoid;
+    display: block !important;
+    page-break-inside: avoid !important;
+    page-break-before: avoid !important;
   }
 
   p {
-    page-break-inside: avoid;
+    display: block !important;
+    page-break-inside: avoid !important;
   }
 
   p:has(img) {
-    page-break-before: avoid;
+    page-break-before: avoid !important;
   }
 
   p {
-    margin: 0;
-    padding: 0.5cm;
+    margin: 0 !important;
+    padding: 0.5cm !important;
   }
 }
 
