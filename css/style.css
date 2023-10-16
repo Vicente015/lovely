@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Spectral;
+  src: url('/fonts/Spectral-Regular.ttf');
+}
+
 :root {
   --chestnut-50: #f8f9f7;
   --chestnut-100: #f9f1dc;
@@ -174,23 +179,27 @@ p,ul,ol {
   text-align: justify;
 }
 
+code {
+  font-size: 14px;
+  color: var(--text-color);
+  font-family: monospace;
+  text-align: center;
+  margin: auto;
+}
+
 a {
   color: var(--heading-color);
   text-decoration: none;
 }
 
 footer p {
-  color: #dbfc97;
+  color: var(--text-color);
   font-size: 0.9em;
   font-style: italic;
 }
 
-footer a {
-  color: var(--olive-300);
-}
-
 .medium-zoom-overlay {
-  background-color: var(--zoom-bg-color);
+  background-color: var(--zoom-bg-color) !important;
 }
 
 img {
@@ -200,10 +209,8 @@ img {
   width: 500px;
   height: 100%;
   filter: saturate(200%) contrast(60%);
-  margin: auto;
+  margin: 20px auto;
 }
-
-
 
 article[contenteditable="true"] {
   padding: 0 5px;
@@ -214,20 +221,55 @@ article[contenteditable="true"] {
 .options {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: .5em;
+  align-items: center;
+  margin-bottom: 1em;
+  color: var(--text-color);
+}
+
+.options select {
+  color: var(--heading-color);
+  padding: .5em 1em;
+  background-color: var(--zoom-bg-color);
+  border: 2px solid var(--zoom-bg-color);
+  border-radius: 15px;
 }
 
 @media print {
-  body {
-    padding: 0 4em;
+  * {
+    font-size: 16pt;
+    line-height: 1.5;
   }
+
+  body {
+    padding: 8mm 12mm;
+  }
+
   img {
-    margin-top: 20px;
     line-height: 0;
   }
+
   .options {
-    display: none !important;
-    visibility: hidden !important;
+    display: none;
+    visibility: hidden;
+  }
+
+  img {
+    page-break-inside: avoid;
+    page-break-before: avoid;
+  }
+
+  p {
+    page-break-inside: avoid;
+  }
+
+  p:has(img) {
+    page-break-before: avoid;
+  }
+
+  p {
+    margin: 0;
+    padding: 0.5cm;
   }
 }
 
