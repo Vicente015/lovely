@@ -31,10 +31,12 @@ site
     'https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js',
   )
 
+// !debug: .process(['.html'], (page: Page) => console.debug(page.data))
 site
   .process(['.html'], transformToInline)
 
-// .process(['.html'], (page: Page) => console.debug(page.data))
+site
+  .copy('fonts')
 
 site
   .use(date())
